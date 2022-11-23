@@ -1,0 +1,25 @@
+{% extends 'prueba1/indext.html'%}
+
+{%block content%}
+    <center>
+
+    
+    <br><br>
+
+      
+    <div align="center"><h3 class = "ex"><b><i><font COLOR ="black">REGRESION LOGISTICA</font></i></b></h3></div>
+    <div align="center"><h3 class = "ex"><b><i><font COLOR ="black">°Ingresar el valor que corresponda para x1,X2</font></i></b></h3></div>
+    <form class="center"  action="/regresion/" method="get">
+        {% csrf_token %}
+    <form>
+       
+        Valor de x1: <input type="number" name="x1" id="specificSizeInputX" placeholder="x1"/>  <br/><br/>
+        
+        Valor de x2: <input type="number" name="x2" id="specificSizeInputX" placeholder="x2"/>  <br/><br/> 
+        
+        Calcular : <input type="submit" value="Enviar valores">
+
+
+    </form>
+</center>
+{% endblock%}

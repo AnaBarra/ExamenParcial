@@ -1,0 +1,64 @@
+{% extends 'prueba1/indext.html'%}
+
+{%block content%}
+
+    <center>
+
+    <br><br>
+    <div align="center"><h3 class = "ex"><b><i><font COLOR ="black">AlGORTIMO KNN</FONT></i></b></h3></div>
+    <div align="center"><h3 class = "ex"><b><i><font COLOR ="black">°Ingresa el valor de k vecinas</font></i></b></h3></div>
+    <div align="center"><h3 class = "ex"><b><i><font COLOR ="black">°Ingresar el valor que corresponda para x1,x2,x3</font></i></b></h3></div>
+    <form class="center"  action="/knn/" method="post">
+    {% csrf_token %}
+    <form>
+        Valor de K: <input type="number" name="k" id="specificSizeInputX" placeholder="k"/>  <br/><br/>
+        Valor de x1: <input type="number" name="x1" id="specificSizeInputX" placeholder="x1"/>  <br/><br/>
+        Valor de x2: <input type="number" name="x2" id="specificSizeInputX" placeholder="x2"/>  <br/><br/>
+        Valor de x3: <input type="number" name="x3" id="specificSizeInputX" placeholder="x3"/>  <br/><br/>
+        Calcular : <input type="submit" value="Enviar valores">
+    </form>
+    <br>
+    <table width="100%"  cellpadding="8" cellspacing="0" class="table">
+        <tr>
+            <td>
+                <div align="center">
+                    <table width="80%"  table class="table">
+                        <tr>
+                            <th>VARIABLE</th>
+                        
+
+                        </tr>
+                        {% for i in letra %}
+                        <tr>
+                            <td class="bg-info">{{i}}</td>
+                            
+                        </tr>
+                        {% endfor %}
+
+                    </table>
+
+                </div>
+
+            </td>
+            <td>
+                <div align="center">
+                    <table width="80%"  table class="table">
+                        <tr>
+                            <th>DISTANCIA</th>
+                        </tr>
+  
+                        {% for val in number %}
+                        <tr>
+                            <td class="bg-warning">{{val}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+</center>
+  {% endblock %}  
+      
+
+

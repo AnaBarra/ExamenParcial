@@ -1,0 +1,50 @@
+{% extends 'prueba1/indext.html'%}
+{% block content %}
+<center>
+    <div align = "center"><h2 class = "ex" ><i><font COLOR ="teal">REGISTROS</font></i></h2></div>
+    <table width="100%"  cellpadding="8" cellspacing="0" class="table">
+            <tr>
+                <td>
+                        <table width="80%"  table class="table">
+                            <tr>
+                                <th>COLUMNA 1 </th>
+                                <th>COLUMNA 2</th>
+                                <th>COLUMNA 3</th>
+                                <th>COLUMNA 4</th>
+                            </tr>
+
+                            {% for valores in valor %}
+                            <tr>
+                                <td class="bg-primary">{{valores.dato1}}</td>
+            
+                                <td class="bg-success">{{valores.dato2}}</td>
+                        
+                                <td class="bg-warning">{{valores.dato3}}</td>
+                        
+                                <td class="bg-danger">{{valores.dato4}}</td>
+                                
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </td>
+                <td>
+                        <div align = "center">
+                        <table class="table">
+                            <tr>
+                                <th>SUMA</th>
+                            </tr>
+
+                            {% for val in sumas %}
+                            <tr>
+                                <td class="bg-info">{{val}}</td>
+                                
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </center>
+        {% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'prueba1/indext.html'%}
+
+{%block content%}
+    <center>
+
+    
+    <br><br>
+
+      
+    <div align="center"><h3 class = "ex"><b><i><font COLOR ="black">AlGORTIMO INGENUO</FONT></i></b></h3></div>
+    <div align="center"><h3 class = "ex"><b><i><font COLOR ="black">°Ingresar el valor que corresponda para x,y,z:</font></i></b></h3></div>
+    <form class="center"  action="/ingenuo/" method="post">
+        
+        {% csrf_token %}    
+    <form>
+       
+        Valor de x: <input type="number" name="x" id="specificSizeInputX" placeholder="x"/>  <br/><br/>
+        Valor de y: <input type="number" name="y" id="specificSizeInputX" placeholder="y"/>  <br/><br/>
+        Valor de z: <input type="number" name="z" id="specificSizeInputX" placeholder="z"/>  <br/><br/>
+        Calcular : <input type="submit" value="Enviar valores">
+
+
+    </form>
+    <div class="alert alert-primary" role="alert">
+        La letras es: {{letra}}
+      </div>
+</center>
+{% endblock%}
